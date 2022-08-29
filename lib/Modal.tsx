@@ -1,6 +1,4 @@
-// src/components/Modal/Modal.js
 import {ReactNode, useEffect} from 'react';
-import ReactPortal from './ReactPortal';
 import {createPortal} from 'react-dom';
 
 interface ModalProps {
@@ -15,7 +13,7 @@ export default function Modal({ children, isOpen, handleClose }:ModalProps) {
         return null;
 
     return createPortal(
-        <div className="modal">
+        <div className="">
             <button onClick={handleClose} className="close-btn">
                 Close
             </button>

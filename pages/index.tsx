@@ -1,7 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import {useState} from 'react';
 import Modal from '../lib/Modal';
 
@@ -15,11 +12,14 @@ const Home: NextPage = () => {
           <button onClick={() => setIsOpen(true)}>
             Click to Open Modal
           </button>
+            <button onClick={() => setIsOpen2(true)}>
+                Click to Open Modal2
+            </button>
 
           <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
             This is Modal Content!
           </Modal>
-        <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
+        <Modal handleClose={() => setIsOpen2(false)} isOpen={isOpen2}>
             This is Modal Content!2
         </Modal>
         </header>
