@@ -6,7 +6,8 @@ import {useState} from 'react';
 import Modal from '../lib/Modal';
 
 const Home: NextPage = () => {
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen2, setIsOpen2] = useState(false);
 
   return (
       <div className="App">
@@ -18,6 +19,9 @@ const Home: NextPage = () => {
           <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
             This is Modal Content!
           </Modal>
+        <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
+            This is Modal Content!2
+        </Modal>
         </header>
       </div>
   );
